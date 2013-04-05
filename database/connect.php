@@ -1,7 +1,7 @@
 ﻿<?php
 	define('DB_USER', 'root');
-	define('DB_MDP', '');
-	define('DB_DB', 'supervod');
+	define('DB_MDP', 'a08d11r91$');
+	define('DB_DB', 'superVod');
 	define('DB_HOST', 'localhost');
 	
 	$connexion = mysql_pconnect(DB_HOST, DB_USER,DB_MDP);

@@ -17,5 +17,12 @@
 		
 		return $sRetour;
 	}
-	
+
+    function fetch_all_objects($poResult) {
+        while($object = mysql_fetch_object($poResult)) {
+            $return[] = $object;
+        }
+
+        return $return;
+    }
 ?>

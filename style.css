@@ -56,3 +56,8 @@ td {
 .form td {
 	border: none;
 }
+
+#formSearch {
+    float: left;
+    width: 550px;
+}
