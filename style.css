@@ -1,0 +1,58 @@
+body {
+	margin: auto;
+	width: 1300px;
+}
+#header {
+	margin-top: 35px;
+}
+.logoLeft {
+	float: left;
+	display: inline-block;
+	
+}
+.logoRight {
+	float: left;
+}
+h1 {
+	float: left;
+	
+}
+#speedbar {
+	clear: both;
+	margin: auto;
+	margin-top: 70px;
+	width: 71%;
+	background-color: rgb(220,220,17);
+	text-decoration: none;
+}
+#speedbar li {
+	width: 100px;
+	display:inline;
+	padding: 10px;
+	border-right: 1px solid white;
+}
+
+#speedbar a:hover {
+	text-decoration: underline;
+	color: black;
+}
+#speedbar a:active {
+}
+
+
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+
+}
+
+td {
+	border : 1px solid black;
+	padding: 5px;
+}
+.form {
+	border: none;
+}
+.form td {
+	border: none;
+}
