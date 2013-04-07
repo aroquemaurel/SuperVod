@@ -2,13 +2,17 @@
     require_once('database/connect.php');
     require_once('util.php');
 	function getAllSeries() {
+        $return = array();
 		$result = (mysql_query("select distinct noms, series.image, series.cs, types, max(saison) AS nb_saisons, count(numero) as nb_episodes
 							from episodes, series
 							where series.cs = episodes.cs
-							group by noms
+							group by types, noms
 						"));
+        while($object = mysql_fetch_object($result)) {
+            $return[$object->cs] = $object;
+        }
 
-        return fetch_all_objects($result);
+        return ($return);
     }
 	function getAllAnneesDiffusion() {
         return fetch_all_objects(mysql_query('SELECT distinct annee FROM episodes'));
