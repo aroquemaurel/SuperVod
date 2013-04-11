@@ -20,22 +20,32 @@
 	
 	function searchSeries($psType, $psTitre, $piAnnee) {
 		$bTitle = isset($psTitre);
-		$bType = $psType == 'NULL';
+		$bType = ($psType != 'NULL');
 		$bAnnee = isset($piAnnee);
 		$retour = array();
-		$requete = 'SELECT distinct noms FROM series';
-		if($bTitle || $bType || $bAnnee) {
-			$requete .= ' WHERE ';
+		$requete = 'SELECT distinct noms FROM series,episodes';
+		$requete .= ' WHERE ';
+		if(!($bTitle || $bType || $bAnnee)) {
+			$requete.= '1 AND 1';
 		}
 		
 		if($bTitle) {
 			$requete .= ' noms LIKE \'%'.$psTitre.'%\' ';
 		}
+		/* TODO ajouter add type et année */
+		if($bAnnee) {
+			$requete .= 'AND episodes.cs = series.cs ';
+			$requete .= ' AND annee = \''.$piAnnee.'\'';
+		}		
+
+		if($bType) {
+			$requete .= ' AND types = \''.$psType.'\'';
+		}
+
+
 		$result = mysql_query($requete);
 		while($serie = mysql_fetch_object($result)) {
 			$retour[] = $serie;
 		}
-		/* TODO ajouter add type et année */
-		
 		return $retour;
 	}

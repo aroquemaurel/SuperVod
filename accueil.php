@@ -39,7 +39,7 @@
             <div class="row-fluid">
                 <div class="span9">
 
-<?php
+	<?php
 					echo '<h3><img width="50px;"src="'.$series[$iSerieActuel]->image.'" alt="'.$series[$iSerieActuel]->noms.'" />';
 					echo $series[$iSerieActuel]->noms.' - '.$series[$iSerieActuel]->nb_saisons.
                         ' saisons et '.$series[$iSerieActuel]->nb_episodes.' épisodes</h3>';
@@ -73,7 +73,7 @@
 			
 					echo '</table>';
 		?>
-	</table>
+</table>
 <?php
     include_once('vues/footer.php');
 ?>
