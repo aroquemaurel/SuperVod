@@ -10,6 +10,9 @@
 			break;
 			case 'P':
 				$sRetour = 'Policier';
+				break;
+			case 'N':
+				$sRetour = 'Indifférent';
 			break;
 			default:
 				echo "Fonction conversionType: Erreur cas default du switch";
@@ -24,5 +27,14 @@
         }
 
         return $return;
+    }
+
+    function redirection($psUrl, $piTime=2000) {
+        echo '
+        <script type="text/javascript">
+            window.setTimeout("location=(\''.$psUrl.'\');",'.$piTime.')
+        </script>
+
+        ';
     }
 ?>

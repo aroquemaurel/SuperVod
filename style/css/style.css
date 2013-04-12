@@ -1,20 +1,11 @@
-table {
-	border: 1px solid black;
-	border-collapse: collapse;
-}
-
-td {
-	border : 1px solid black;
-	padding: 5px;
-}
-.form {
-	border: none;
-}
-.form td {
-	border: none;
-}
-
 #formSearch {
     float: left;
-    width: 550px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+#series {
+    float: left;
+}
+h3 {
+    font-size: 15pt;
 }

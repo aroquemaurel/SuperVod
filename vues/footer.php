@@ -7,8 +7,7 @@
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="style//js/jquery.js"></script>
-<script src="style//js/bootstrap-transition.js"></script>
+<!--<script src="style//js/bootstrap-transition.js"></script>
 <script src="style//js/bootstrap-alert.js"></script>
 <script src="style//js/bootstrap-modal.js"></script>
 
@@ -22,6 +21,6 @@
 <script src="style//js/bootstrap-collapse.js"></script>
 <script src="style//js/bootstrap-carousel.js"></script>
 <script src="style//js/bootstrap-typeahead.js"></script>
-
+-->
 </body>
 </html>

@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php session_start(); ?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title>SuperVod</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -10,6 +10,8 @@
     <!-- Le styles -->
 
     <link href="style/css/bootstrap.css" rel="stylesheet">
+    <link href="style/css/style.css" rel="stylesheet">
+
     <style type="text/css">
         body {
             padding-top: 60px;
@@ -42,6 +44,9 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="style/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="style/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="style/ico/favicon.png">
+    <script src="style//js/jquery.js"></script>
+    <script src="style//js/bootstrap.min.js"></script>
+
 </head>
     <body>
 
@@ -54,26 +59,36 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="brand" href="#">SuperVod
+                <a class="brand" href="index.php">SuperVod
                 </a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li class="active"><a href="accueil.php">Nouveautés</a></li>
+                        <li class="active"><a href="index.php">Nouveautés</a></li>
                         <li><a href="#">Téléchargement</a></li>
 <!--                        <li><a href="#contact">Administrateur</a></li> -->
                         <li><a href="recherche_series.php">Recherche d'une série</a></li>
                         <li><a href="#">Recherche d'un épisode</a></li>
+                        <?php
+                        if(isset($_SESSION['admin']) && $_SESSION['admin']) {
+                            echo '<li><a href="prive.php">Administration</a></li>';
+                        }
+                        if(isset($_SESSION['connect']) && $_SESSION['connect']) {
+                            echo '<li><a href="index.php?p=disconnect">Déconnexion</a></li>';
+                        }
+                        ?>
                     </ul>
-                    <form class="navbar-form pull-right">
-                        <input class="span2" type="text" placeholder="Email">
-                        <input class="span2" type="password" placeholder="Password">
+                    <?php
+                    if(!isset($_SESSION['connect']) || !$_SESSION['connect']) {
+                     echo '
+                    <form class="navbar-form pull-right" action="index.php?p=connect" method="post">
+                        <input class="span2" type="text" name="user" placeholder="Utilisateur">
+                        <input class="span2" type="password" name="mdp" placeholder="Password">
                         <button type="submit" class="btn">Sign in</button>
-
-                    </form>
+                    </form>';
+                    }
+                    ?>
                 </div><!--/.nav-collapse -->
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row-fluid" style="margin: auto;">
 
