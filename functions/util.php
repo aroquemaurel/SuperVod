@@ -38,4 +38,15 @@
 
         ';
     }
+
+function conversionDuree($pdDuree) {
+    $reste = $pdDuree;
+
+    $heures=floor($reste/3600);
+    $reste %=3600;
+    $minutes=floor($reste/60);
+    $secondes=$reste % 60;
+
+    return ((($heures > 0) ? $heures . 'h ' : '') . $minutes . 'mn '. (($secondes > 0) ? $secondes. 's' : ''));
+}
 ?>

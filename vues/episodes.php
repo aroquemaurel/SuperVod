@@ -28,7 +28,7 @@ function afficherListeEpisodes($paoEpisode, $pbAfficherPrix=false) {
             echo '<td>'.$episode->numero.'</td>';
             echo '<td>'.$episode->annee.'</td>';
             echo '<td>'.$episode->realisateur.'</td>';
-            echo '<td>'.$episode->de.'</td>';
+            echo '<td>'.conversionDuree($episode->de).'</td>';
             echo '<td>'.$episode->lim.'</td>';
         if($pbAfficherPrix) {
             echo '<td>'.(($episode->prixStream != '') ? $episode->prixStream : 'N/A').'</td>';
