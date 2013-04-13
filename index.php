@@ -1,9 +1,10 @@
 ﻿<?php
+    $page = 'Accueil';
     include_once('vues/header.php');
-
+    require_once('vues/episodes.php');
+    require_once('vues/series.php');
     require_once('functions/util.php');
-    require_once('functions/episodes.php');
-    require_once('functions/series.php');
+
 
 	require_once('database/db_series.php');
     require_once('database/db_episodes.php');

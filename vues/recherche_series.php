@@ -12,7 +12,6 @@
 echo '<div id="series">';
     foreach($series as $serie) {
         afficherSerie($serie, true);
-        //afficherListeEpisodes(getEpisodes($serie->cs));
     }
 echo '</div>';
 

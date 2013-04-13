@@ -22,6 +22,7 @@
 	}
 
     function fetch_all_objects($poResult) {
+        $return = array();
         while($object = mysql_fetch_object($poResult)) {
             $return[] = $object;
         }

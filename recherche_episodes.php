@@ -1,3 +1,28 @@
 ﻿<?php
-	include_once('header.php');
+$page = "Recherche des épisodes";
+include_once('vues/header.php');
+require_once('database/db_episodes.php');
+require_once('vues/episodes.php');
+require_once('vues/series.php');
+
+require_once('database/connect.php');
+require_once('database/db_series.php');
+
+$series = array();
+$serieRempli = (isset($_GET['serie']) && $_GET['serie'] != 'NULL');
+$anneeRemplie =(isset($_GET['annee']) && $_GET['annee'] != '');
+$episodes = array();
+if( $serieRempli || $anneeRemplie) {
+    $serie = (isset($_GET['serie'])) ? $_GET['serie']: '';
+    $annee = (isset($_GET['annee'])) ? $_GET['annee']: '';
+    $saison = (isset($_GET['saison'])) ? $_GET['saison']: '';
+    $prix  = (isset($_GET['prix'])) ? $_GET['prix']: '';
+    $abTypes = array("streaming"=>(!isset($_GET['streaming']) || $_GET['streaming'] != 'S') ? 'S': 0,
+                    "location"=> (!isset($_GET['location']) || $_GET['location'] != 'L') ? 'L':0,
+                    "achat"=>(!isset($_GET['achat']) || $_GET['achat'] != 'A') ? 'A':0);
+    $episodes = searchEpisodes($serie, $annee, $saison, $prix, $abTypes);
+}
+
+include_once('vues/recherche_episodes.php');
 ?>
+

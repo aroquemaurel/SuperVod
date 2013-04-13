@@ -1,6 +1,7 @@
 ﻿<?php
     require_once('database/connect.php');
     require_once('functions/util.php');
+
 	function getAllSeriesComplete($psWhereClause='') {
         $return = array();
 		$result = mysql_query("select distinct noms, series.image, series.cs, types, max(saison) AS nb_saisons, count(numero) as nb_episodes
@@ -15,7 +16,7 @@
     }
 
 	function getAllSeries() {
-		return fetch_all_objects((mysql_query("select distinct noms, cs, types from series")));
+		return fetch_all_objects((mysql_query("select distinct noms, cs, types from series order by types")));
 	}
 	function getAllAnneesDiffusion() {
         return fetch_all_objects(mysql_query('SELECT distinct annee FROM episodes ORDER BY annee'));
@@ -25,7 +26,6 @@
 		$bTitle = isset($psTitre);
 		$bType = ($psType != 'NULL');
 		$bAnnee = isset($piAnnee) && $piAnnee != '';
-		$retour = array();
         $requete = ' AND ';
 		if($bTitle) {
 			$requete .= ' noms LIKE \'%'.$psTitre.'%\' ';

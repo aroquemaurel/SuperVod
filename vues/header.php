@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>SuperVod</title>
+    <title>SuperVod - <?php echo $page; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -63,14 +63,14 @@
                 </a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li class="active"><a href="index.php">Nouveautés</a></li>
-                        <li><a href="#">Téléchargement</a></li>
-<!--                        <li><a href="#contact">Administrateur</a></li> -->
-                        <li><a href="recherche_series.php">Recherche d'une série</a></li>
-                        <li><a href="#">Recherche d'un épisode</a></li>
+                        <li <?php if($page == "Accueil") echo 'class="active"'; ?>><a href="index.php">Accueil</a></li>
+                        <li <?php if($page == "Téléchargements") echo 'class="active"'; ?>><a href="#">Téléchargement</a></li>
+                        <li <?php if($page == "Recherche des séries") echo 'class="active"'; ?>><a href="recherche_series.php">Recherche d'une série</a></li>
+                        <li <?php if($page == "Recherche des épisodes") echo 'class="active"'; ?>><a href="recherche_episodes.php">Recherche d'un épisode</a></li>
                         <?php
                         if(isset($_SESSION['admin']) && $_SESSION['admin']) {
-                            echo '<li><a href="prive.php">Administration</a></li>';
+                            echo '<li '; if($page == "Administration") echo 'class="active"';
+                            echo '><a href="prive.php">Administration</a></li>';
                         }
                         if(isset($_SESSION['connect']) && $_SESSION['connect']) {
                             echo '<li><a href="index.php?p=disconnect">Déconnexion</a></li>';

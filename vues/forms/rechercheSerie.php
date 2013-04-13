@@ -6,7 +6,7 @@
             <div class="controls">
                 <!-- Si un type à été choisis préalablement, on préselectionne le choix de l'utilisateur -->
                 <input type="radio" name="type" value="NULL" checked="checked"
-                    <?php echo ($typeRempli && $_GET['type'] == 'NULL') ? 'checked="checked"' : ''; ?> /> Indiférrent
+                    <?php echo ($typeRempli && $_GET['type'] == 'NULL') ? 'checked="checked"' : ''; ?> /> Indifférrent
                 <input type="radio" name="type" value="A"
                     <?php echo ($typeRempli && $_GET['type'] == 'A') ? 'checked="checked"' : ''; ?>/> Animé
                 <input type="radio" name="type" value="P"

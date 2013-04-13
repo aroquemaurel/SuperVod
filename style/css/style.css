@@ -3,9 +3,13 @@
     margin-right: 50px;
     margin-top: 50px;
 }
-#series {
+
+#series,#episodes {
     float: left;
 }
 h3 {
     font-size: 15pt;
+}
+.formPrive {
+    margin-left: 30%; width:600px
 }

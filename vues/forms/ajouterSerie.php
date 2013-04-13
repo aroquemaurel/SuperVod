@@ -1,7 +1,7 @@
 <form method="POST" id="postAjoutSerie" action="insertion.php" class="form-horizontal well">
-
-    <fieldset>
-        <legend>Formulaire d'insertion de la serie.</legend>
+    <fieldset">
+        <legend style="text-align: center">Formulaire d'insertion de la serie.</legend>
+        <div class="formPrive">
         <div class="control-group">
             <label class="control-label">Type</label>
             <div class="controls">
@@ -34,6 +34,7 @@
         <div class="form-actions">
             <input type="submit" class="btn btn-primary">
             <input type="reset" class="btn">
+        </div>
         </div>
     </fieldset>
 </form>

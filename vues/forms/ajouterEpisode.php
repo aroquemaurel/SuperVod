@@ -1,23 +1,32 @@
 <?php
-// TODO Ajouter OBLIGATOIREMENT selectionner série auquel appartient l'épisode (liste déroulante ? OU LE SQL MARCHE PAS A CAUSE DE FOREIGN KEY)
 // TODO Changer le type="text" pour image par un formulaire d'upload.
-// TODO Ajouter des vérifications sur les données avant envoie (> 0, < x caractères etc...)
+// TODO navigateurs ne supportant pas le html 5 ?
 ?>
 <form method="POST" action="insertionEpisode.php"  id="postAjoutEpisode" class="form-horizontal well">
     <fieldset>
-        <legend>Ajouter un épisode</legend>
+        <legend  style="text-align: center">Ajouter un épisode</legend>
+        <div class="formPrive">
         <?php $series=getAllSeries();?>
         <div class="control-group">
-            <label class="control-label" for="titre">Serie</label>
+            <label class="control-label" for="titre">Série</label>
             <div class="controls">
                 <?php
+                $typeActuel = '';
                 echo '<select class="input-large"  id="serie" name="serie">';
                 echo '<option value="NULL">&nbsp;</OPTION>';
                 foreach($series as $serie) {
+                    if($typeActuel != $serie->types) {
+                        if($typeActuel != '') {
+                            echo '</optgroup>';
+                        }
+                        $typeActuel = $serie->types;
+                        echo '<optgroup label="'.conversionType($serie->types).'">';
+                    }
                     echo $serie->cs;
                     echo $serie->noms;
                     echo '<option value="'.$serie->cs.'">'.$serie->noms.'</OPTION>';
                 }
+                echo '</optgroup>';
                 echo '</select>';
                 ?>
 
@@ -39,7 +48,7 @@
         <div class="control-group">
             <label class="control-label" for="numero">Numéro</label>
             <div class="controls">
-                <input type="number" class="input-large" style="height:25px;" id="numero" name="numero" />
+                <input type="number" min="0" class="input-large" style="height:25px;" id="numero" name="numero" />
             </div>
             <div class="alert alert-error hide" id="numeroAlert">
                 <h4 class="alert-heading">Erreur !</h4>
@@ -62,7 +71,7 @@
         <div class="control-group">
             <label class="control-label" for="saison">Saison</label>
             <div class="controls">
-                <input type="number" style="height:25px;" class="input-large" id="saison" name="saison" />
+                <input type="number" min="0" style="height:25px;" class="input-large" id="saison" name="saison" />
             </div>
             <div class="alert alert-error hide" id="saisonAlert">
                 <h4 class="alert-heading">Erreur !</h4>
@@ -78,7 +87,7 @@
         <div class="control-group">
             <label class="control-label" for="duree">Durée</label>
             <div class="controls">
-                <input type="number" style="height:25px;" class="input-large" id="duree" name="duree" />
+                <input type="number" min="0" style="height:25px;" class="input-large" id="duree" name="duree" />
             </div>
         </div>
         <div class="control-group">
@@ -102,6 +111,7 @@
         <div class="form-actions">
             <input type="submit" class="btn btn-primary">
             <input type="reset" class="btn">
+        </div>
         </div>
     </fieldset>
 
