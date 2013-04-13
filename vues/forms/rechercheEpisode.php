@@ -1,5 +1,8 @@
 <form type="get" action="recherche_episodes.php" class="form-inline well">
-            <label class="control-label" for="serie">Série</label>
+    <fieldset>
+        <legend>Rechercher une série</legend>
+
+        <label class="control-label" for="serie">Série</label>
                 <input style="height:25px"type="text" class="input-medium"  id="serie"
                        value="<?php echo ($serieRempli) ? $_GET['serie'] : '';//Si l'utilisateur avait entré un titre ?>" name="serie" />
             <label class="control-label" for="annee">Année</label>
@@ -31,4 +34,5 @@
                     <?php echo (isset($_GET['achat']) &&$_GET['achat'] == 'A') ? 'checked="checked"' : ''; ?>/> Achat
 
             <input type="submit" class="btn btn-primary">
+        </fieldset>
 </form>

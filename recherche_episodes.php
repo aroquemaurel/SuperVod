@@ -9,10 +9,13 @@ require_once('database/connect.php');
 require_once('database/db_series.php');
 
 $series = array();
-$serieRempli = (isset($_GET['serie']) && $_GET['serie'] != 'NULL');
-$anneeRemplie =(isset($_GET['annee']) && $_GET['annee'] != '');
+$serieRempli = (isset($_GET['serie']) && $_GET['serie'] != '');
+$anneeRemplie = (isset($_GET['annee']) && $_GET['annee'] != '');
+$saisonRemplie = (isset($_GET['saison']) && $_GET['saison'] != '');
+$prixRempli = (isset($_GET['prix']) && $_GET['prix'] != '');
+$typeRempli =  (isset($_GET['location']) || isset($_GET['streaming']) || isset($_GET['achat']));
 $episodes = array();
-if( $serieRempli || $anneeRemplie) {
+if( $serieRempli || $anneeRemplie || $saisonRemplie || $typeRempli || $prixRempli) {
     $serie = (isset($_GET['serie'])) ? $_GET['serie']: '';
     $annee = (isset($_GET['annee'])) ? $_GET['annee']: '';
     $saison = (isset($_GET['saison'])) ? $_GET['saison']: '';

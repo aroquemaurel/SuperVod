@@ -22,7 +22,7 @@
         return fetch_all_objects(mysql_query('SELECT distinct annee FROM episodes ORDER BY annee'));
 	}
 	
-	function searchSeries($psType, $psTitre, $piAnnee) {
+	function searchSeries($psType, $psTitre, $piAnnee, $paAges) {
 		$bTitle = isset($psTitre);
 		$bType = ($psType != 'NULL');
 		$bAnnee = isset($piAnnee) && $piAnnee != '';
@@ -39,6 +39,18 @@
 		if($bType) {
 			$requete .= ' AND types = \''.$psType.'\'';
 		}
+        $whereType  = '';
+        $nbAge = 0;
+        foreach($paAges as $age) {
+            if($age != 'N/A') {
+                $whereType .= ' AND ';
+                $whereType .= ' lim <> \''.$age.'\'';
+                ++$nbAge;
+            }
+        }
+        if($nbAge != 5) { //si rien n'est coché, on ne filtre pas
+            $requete .= $whereType;
+        }
 
 		return getAllSeriesComplete($requete);
 	}

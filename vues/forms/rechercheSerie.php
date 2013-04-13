@@ -39,6 +39,22 @@
                 </select>
             </div>
         </div>
+        <div class="control-group">
+            <label class="control-label">Age</label>
+            <div class="controls">
+
+        <input type="checkbox" name="lim0" value="0"
+            <?php echo (isset($_GET['lim0']) && $_GET['lim0'] == '0') ? 'checked="checked"' : ''; ?>/> +0
+        <input type="checkbox" name="lim10" value="10"
+            <?php echo (isset($_GET['lim10'])&&$_GET['lim10'] == '10') ? 'checked="checked"' : ''; ?>/> +10
+        <input type="checkbox" name="lim12" value="12"
+            <?php echo (isset($_GET['lim12']) &&$_GET['lim12'] == '12') ? 'checked="checked"' : ''; ?>/> +12
+        <input type="checkbox" name="lim16" value="16"
+                    <?php echo (isset($_GET['lim16']) &&$_GET['lim16'] == '16') ? 'checked="checked"' : ''; ?>/> +16
+        <input type="checkbox" name="lim18" value="18"
+                    <?php echo (isset($_GET['lim18']) &&$_GET['lim18'] == '18') ? 'checked="checked"' : ''; ?>/> +18
+            </div>
+        </div>
 
         <div class="form-actions">
             <input type="submit" class="btn btn-primary">
