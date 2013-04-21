@@ -24,7 +24,7 @@
 			</div>
 
 			 <div class="item carouselItem">
-                <img src="images/62986.png" alt="" />
+                <img src="images/carousel/pokemon.png" alt="" />
                 <div class="carousel-caption">
                     <h4>Les Grands classiques</h4>
                     <p><em>Tous les animés de votre enfance!</em></p>
