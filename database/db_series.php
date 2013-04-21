@@ -30,7 +30,7 @@
 		$bAnnee = isset($piAnnee) && $piAnnee != '';
         $requete = ' and ';
 		if($bTitle) {
-			$requete .= ' noms LIKE \'%'.$psTitre.'%\' ';
+			$requete .= ' noms LIKE LOWER(\'%'.strtolower($psTitre).'%\') ';
 		}
 
 		if($bAnnee) {

@@ -3,7 +3,8 @@ require_once('database/connect.php');
 require_once('functions/util.php');
 
 function getEpisodes($piIdSerie) {
-    return fetch_all_objects(mysql_query("select titre,image as epImage,numero, lim,saison,de,realisateur,annee from episodes where episodes.cs = ".$piIdSerie."
+    return fetch_all_objects(mysql_query("select titre,image as epImage,numero, lim,saison,de,realisateur,annee
+                                        from episodes where episodes.cs = ".$piIdSerie."
                                         order by saison, numero"));
 }
 function getEpisodesWithTarifs() {
@@ -43,9 +44,13 @@ function searchEpisodes($psSerie, $piAnnee, $piSaison, $piPrix, $paType) {
 (select prix from fichiers,episodes where fichiers.ce = ep and type=\'S\' and episodes.ce=fichiers.ce) as prixStream,
 (select prix from fichiers,episodes where fichiers.ce = ep and type=\'L\' and episodes.ce=fichiers.ce) as prixLocation,
 (select prix from fichiers,episodes where fichiers.ce = ep and type=\'A\' and episodes.ce=fichiers.ce) as prixAchat
-                from episodes, fichiers, series
-                where episodes.cs = series.cs and (fichiers.ce = episodes.ce or (1 and 1)) ';
-    $requete .= ' and noms LIKE \'%'.$psSerie.'%\' ';
+             from episodes
+             left join fichiers
+             on fichiers.ce = episodes.ce
+             join series
+             on series.cs = episodes.cs
+             where noms LIKE LOWER(\'%'.strtolower($psSerie).'%\')';
+    //$requete .= ' and noms LIKE \'%'.$psSerie.'%\' ';
 
     if($bAnnee) {
         $requete .= ' AND annee = \''.$piAnnee.'\'';
