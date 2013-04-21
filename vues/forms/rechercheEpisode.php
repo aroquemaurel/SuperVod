@@ -1,12 +1,12 @@
-<form type="get" action="recherche_episodes.php" class="form-inline well">
+<form method="get" action="recherche_episodes.php" class="form-inline well">
     <fieldset>
         <legend>Rechercher une série</legend>
 
         <label class="control-label" for="serie">Série</label>
-                <input style="height:25px"type="text" class="input-medium"  id="serie"
+                <input style="height:25px" type="text" class="input-medium"  id="serie"
                        value="<?php echo ($serieRempli) ? $_GET['serie'] : '';//Si l'utilisateur avait entré un titre ?>" name="serie" />
             <label class="control-label" for="annee">Année</label>
-                <select style="height:25px"id="annee" name="annee" class="input-small">
+                <select style="height:25px" id="annee" name="annee" class="input-small">
                     <option value="">&nbsp;</option>
                     <?php
                     foreach(getAllAnneesDiffusion() as $annee) { //uniquement les années de diffusion
@@ -19,11 +19,11 @@
                     ?>
                 </select>
     <label class="control-label" for="saison">Saison</label>
-    <input type="number" style="height:25px" min="0" class="input-mini"  id="saison"
+    <input type="number" style="height:25px" min="0" class="input-mini" id="saison"
            value="<?php echo (isset($_GET['saison'])) ? $_GET['saison'] : '';//Si l'utilisateur avait entré un titre ?>" name="saison" />
 
     <label class="control-label" for="saison">Prix maximum</label>
-    <input type="number" style="height:25px"min="0" class="input-mini"  id="prix"
+    <input type="number" style="height:25px" min="0" class="input-mini"  id="prix"
            value="<?php echo (isset($_GET['prix'])) ? $_GET['prix'] : '';//Si l'utilisateur avait entré un titre ?>" name="prix" />
                 <!-- Si un type à été choisis préalablement, on préselectionne le choix de l'utilisateur -->
                 <input type="checkbox" name="streaming" value="S"

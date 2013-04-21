@@ -1,6 +1,6 @@
 <?php
 function afficherSerie($poSerie, $pbLien=false) {
-    echo '<h3><img width="50px;"src="'.$poSerie->image.'" alt="'.$poSerie->noms.'" />';
+    echo '<h3><img width="50" src="'.$poSerie->image.'" alt="'.$poSerie->noms.'" />';
     if($pbLien) {
         echo '<a class="linkNoColor" href="index.php?serie='.$poSerie->cs.'">';
     }

@@ -1,7 +1,8 @@
-﻿<?php session_start(); ?><!DOCTYPE html>
-<html lang="en">
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>SuperVod - <?php echo $page; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -64,16 +65,15 @@
                 <div class="nav-collapse collapse">
                     <ul class="nav">
                         <li <?php if($page == "Accueil") echo 'class="active"'; ?>><a href="index.php">Accueil</a></li>
-                        <li <?php if($page == "Téléchargements") echo 'class="active"'; ?>><a href="#">Téléchargement</a></li>
                         <li <?php if($page == "Recherche des séries") echo 'class="active"'; ?>><a href="recherche_series.php">Recherche d'une série</a></li>
                         <li <?php if($page == "Recherche des épisodes") echo 'class="active"'; ?>><a href="recherche_episodes.php">Recherche d'un épisode</a></li>
                         <?php
                         if(isset($_SESSION['admin']) && $_SESSION['admin']) {
                             echo '<li '; if($page == "Administration") echo 'class="active"';
-                            echo '><a href="prive.php">Administration</a></li>';
+                            echo '><a href="prive.php"><i class="icon-white icon-wrench"></i> Administration</a></li>';
                         }
                         if(isset($_SESSION['connect']) && $_SESSION['connect']) {
-                            echo '<li><a href="index.php?p=disconnect">Déconnexion</a></li>';
+                            echo '<li><a href="index.php?p=disconnect"><i class="icon-white icon-off"></i> Déconnexion</a></li>';
                         }
                         ?>
                     </ul>
@@ -83,7 +83,7 @@
                     <form class="navbar-form pull-right" action="index.php?p=connect" method="post">
                         <input class="span2" type="text" name="user" placeholder="Utilisateur">
                         <input class="span2" type="password" name="mdp" placeholder="Password">
-                        <button type="submit" class="btn">Sign in</button>
+                        <button class="btn btn-primary" type="submit"><i class="icon-white icon-user"></i> Se connecter</button>
                     </form>';
                     }
                     ?>

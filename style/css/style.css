@@ -1,9 +1,18 @@
+.menuSeries {
+    padding-left: 30px;
+}
+.infoBulles {
+    color: #333333;
+}
+
+.infoBulles:hover {
+    cursor: default;
+}
 #formSearch {
     float: left;
     margin-right: 50px;
     margin-top: 50px;
 }
-
 #series,#episodes {
     float: left;
 }
@@ -11,5 +20,41 @@ h3 {
     font-size: 15pt;
 }
 .formPrive {
-    margin-left: 30%; width:600px
+    margin-left: 30%; width:500px
+}
+
+.carrousel {
+    bacground-color: black;
+}
+.carousel h1 {
+    color: #d5d5d5;
+}
+#carousel {
+    height: 250px;
+    width: 800px;
+    background-color: black;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+#carousel .carouselItem {
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: auto;;
+}
+
+.typeAccesEpisode {
+    margin-top: -15px;
+    margin-left: -50px;
+}
+
+.realisateur {
+    margin-top: -10px;
+}
+
+#possibiliteAchat {
+    margin-left: 70px;
+}
+.alertsForms {
+    width: 500px;
 }

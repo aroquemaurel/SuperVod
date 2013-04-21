@@ -1,8 +1,8 @@
-<form type="get" action="recherche_series.php" class="form-horizontal well">
+<form method="get" action="recherche_series.php" class="form-horizontal well">
     <fieldset>
         <legend>Rechercher une série</legend>
         <div class="control-group">
-            <label class="control-label" for="type">Type</label>
+            <label class="control-label">Type</label>
             <div class="controls">
                 <!-- Si un type à été choisis préalablement, on préselectionne le choix de l'utilisateur -->
                 <input type="radio" name="type" value="NULL" checked="checked"

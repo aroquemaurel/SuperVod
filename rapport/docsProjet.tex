@@ -1,0 +1,131 @@
+\date{\today}
+
+\makeindex
+\lfoot{Université Toulouse III -- Paul Sabatier}
+\rfoot{}
+%\rfoot{}
+\cfoot{}
+\makeglossary
+\makeatletter
+\def\clap#1{\hbox to 0pt{\hss #1\hss}}%
+\def\ligne#1{%
+\hbox to \hsize{%
+\vbox{\centering #1}}}%
+\def\haut#1#2#3{%
+\hbox to \hsize{%
+\rlap{\vtop{\raggedright #1}}%
+\hss
+\clap{\vtop{\centering #2}}%
+\hss
+\llap{\vtop{\raggedleft #3}}}}%
+\def\bas#1#2#3{%
+\hbox to \hsize{%
+\rlap{\vbox{\raggedright #1}}%
+\hss \clap{\vbox{\centering #2}}%
+\hss
+\llap{\vbox{\raggedleft #3}}}}%
+\def\maketitle{%
+\thispagestyle{empty}\vbox to \vsize{%
+\haut{}{\@blurb}{}
+
+\vfill
+\vspace{1cm}
+\begin{flushleft}
+\usefont{OT1}{ptm}{m}{n}
+\huge \@title
+\end{flushleft}
+\par
+\hrule height 4pt
+\par
+\begin{flushright}
+\usefont{OT1}{phv}{m}{n}
+\Large \@author
+\par
+\end{flushright}
+\vspace{1cm}
+\vfill
+\vfill
+\bas{}{\@location, le \@date}{}
+}%
+\cleardoublepage
+}
+\def\date#1{\def\@date{#1}}
+\def\author#1{\def\@author{#1}}
+\def\title#1{\def\@title{#1}}
+\def\location#1{\def\@location{#1}}
+\def\blurb#1{\def\@blurb{#1}}
+\date{\today}
+\author{}
+\title{}
+\location{Amiens}\blurb{}
+\makeatother
+\title{\titre}
+\author{Base de données}
+
+\location{Toulouse}
+\blurb{%
+Université Toulouse III -- Paul sabatier\\
+L2 Informatique\\
+\vspace{30px}
+\begin{flushleft}Antoine de \bsc{Roquemaurel} (antoine.de-roquemaurel@univ-tlse3.fr)\\ 
+	Fabrice \bsc{Valleix} (valleix.fabrice@gmail.com)\\
+ Groupe 2.2\end{flushleft}
+}%
+
+
+
+%\title{Cours \\ \titre}
+%\date{\today\\ Semestre \semestre}
+
+%\lhead{Cours: \titre}
+%\chead{}
+%\rhead{\thepage}
+
+%\lfoot{Université Paul Sabatier Toulouse III}
+%\cfoot{\thepage}
+%\rfoot{\sigle\semestre}
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\bsc{\chaptername~\thechapter{} :} #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection{ #1}}}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+\fancyhf{}
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\rightmark}
+\fancyfoot[LE,RO]{--~\thepage~--}
+\fancyfoot[LO]{\titre{}}
+\fancyfoot[RE]{Antoine de \bsc{Roquemaurel} -- Fabrice \bsc{Valleix}}
+
+%% Cas des premières pages de chapitre
+\fancypagestyle{plain}{%
+	\fancyhf{}%
+	\fancyfoot[L]{\titre{}}
+	\fancyfoot[R]{--~\thepage~--}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0.3pt}
+}
+\makeatletter
+\renewcommand*{\lstlistlistingname}{Liste des codes sources}
+\renewcommand\listoffigures{%
+    \chapter{\listfigurename}%
+      \@mkboth{\MakeUppercase\listfigurename}%
+              {\MakeUppercase\listfigurename}%
+       \@starttoc{lof}%
+    }
+    \renewcommand\listoftables{%
+    \chapter{\listtablename}%
+    \@mkboth{\MakeUppercase{\listtablename}}%
+            {\MakeUppercase{\listtablename}}%
+    \@starttoc{lot}
+    }
+
+    \renewcommand\lstlistoflistings{%
+    \begingroup
+    \chapter{\lstlistlistingname}%
+    \parskip\z@\parindent\z@\parfillskip \z@ \@plus 1fil%
+    \@starttoc{lol}%
+    \endgroup
+    }
+	\makeatother

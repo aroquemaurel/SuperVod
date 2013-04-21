@@ -1,12 +1,16 @@
-<?php
-// TODO Changer le type="text" pour image par un formulaire d'upload.
-// TODO navigateurs ne supportant pas le html 5 ?
-?>
-<form method="POST" action="insertionEpisode.php"  id="postAjoutEpisode" class="form-horizontal well">
+<form method="POST" action="prive.php"  id="postAjoutEpisode" class="form-horizontal well" enctype="multipart/form-data">
     <fieldset>
         <legend  style="text-align: center">Ajouter un épisode</legend>
         <div class="formPrive">
-        <?php $series=getAllSeries();?>
+        <?php
+            if($postEpisode) { // Si on a posté une série
+                if(isset($postEpisode) && $postEpisode) { //aucune erreur, c'est bon.
+                    afficherAlert('success', 'Votre épisode à bien été ajoutée ');
+                } else {
+                    afficherAlert('error', 'Erreur dans l\'ajout de l\'épisode ! ');
+                }
+            }
+        $series=getAllSeries();?>
         <div class="control-group">
             <label class="control-label" for="titre">Série</label>
             <div class="controls">
@@ -24,33 +28,31 @@
                     }
                     echo $serie->cs;
                     echo $serie->noms;
-                    echo '<option value="'.$serie->cs.'">'.$serie->noms.'</OPTION>';
+                    echo '<option value="'.$serie->cs.'">'.$serie->noms.'</option>';
                 }
                 echo '</optgroup>';
                 echo '</select>';
                 ?>
-
             </div>
-            <div class="alert alert-error hide" id="serieAlert">
-                <h4 class="alert-heading">Erreur !</h4>
+            <div class="alert alert-error hide alertsForms" id="serieAlert">
+                <h4 class="alert-heading erreursForms">Erreur !</h4>
                 Le champ ne peut être vide </div>
-
         </div>
         <div class="control-group">
             <label class="control-label" for="titre">Titre</label>
             <div class="controls">
-                <input type="text" class="input-large" style="height:25px;" id="titre" name="titre" />
+                <input type="text" class="input-large" id="titre" name="titre" />
             </div>
-            <div class="alert alert-error hide" id="titreAlert">
+            <div class="alert alert-error hide alertsForms" id="titreAlert">
                 <h4 class="alert-heading">Erreur !</h4>
                 Le champ ne peut être vide </div>
         </div>
         <div class="control-group">
             <label class="control-label" for="numero">Numéro</label>
             <div class="controls">
-                <input type="number" min="0" class="input-large" style="height:25px;" id="numero" name="numero" />
+                <input type="number" min="0" class="input-large" id="numero" name="numero" />
             </div>
-            <div class="alert alert-error hide" id="numeroAlert">
+            <div class="alert alert-error hide alertsForms" id="numeroAlert">
                 <h4 class="alert-heading">Erreur !</h4>
                 Le champ ne peut être vide
             </div>
@@ -71,74 +73,125 @@
         <div class="control-group">
             <label class="control-label" for="saison">Saison</label>
             <div class="controls">
-                <input type="number" min="0" style="height:25px;" class="input-large" id="saison" name="saison" />
-            </div>
-            <div class="alert alert-error hide" id="saisonAlert">
+                <input type="number" min="0" class="input-large" id="saison" name="saison" />
+            </div> 
+            <div class="alert alert-error hide alertsForms" id="saisonAlert">
                 <h4 class="alert-heading">Erreur !</h4>
                 Le champ ne peut être vide </div>
-
         </div>
         <div class="control-group">
-            <label class="control-label" for="realisateur">Réalisateur</label>
-            <div class="controls">
-                <input type="text" class="input-large" style="height:25px;" id="realisateur" name="realisateur" />
+                <fieldset id="possibiliteAchat">Possiblité d'achat</fieldset>
+                <div class="controls">
+                    <div class="typeAccesEpisode control-group">
+                        <label class="control-label" for="typeLocation">Location</label>
+                            <div class="controls">
+                                <input type="checkbox" id="typeLocation" name="typeLocation" value="L" />&nbsp;&nbsp;
+                                <input readonly="readonly" class="input-mini"  id="prixLocation" type="number" name="prixLocation" />
+                            </div>
+                    </div>
+                    <div class="typeAccesEpisode  control-group">
+                       <label class="control-label" for="typeAchat">Achat</label>
+                        <div class="controls">
+                            <input type="checkbox" id="typeAchat" name="typeAchat" value="A" />&nbsp;&nbsp;
+                            <input class="input-mini" readonly="readonly" id="prixAchat" type="number" name="prixAchat" />
+                        </div>
+                    </div>
+                    <div class="typeAccesEpisode control-group">
+                        <label class="control-label" for="typeStreaming">Streaming</label>
+                        <div class="controls">
+                            <input type="checkbox" id="typeStreaming" name="typeStreaming" value="S" />&nbsp;&nbsp;
+                            <input class="input-mini" readonly="readonly" id="prixStreaming" type="number" name="prixStreaming" />
+                        </div>
+                    </div>
+                </div>
+        </div>
+            <div class="control-group" class="realisateur">
+                <label class="control-label" class="realisateur"for="realisateur">Réalisateur</label>
+                <div class="controls">
+                    <input type="text" class="input-large" id="realisateur" name="realisateur" />
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="duree">Durée</label>
+                <div class="controls">
+                    <input type="number" min="0"  class="input-large" id="duree" name="duree" />
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="image">Image</label>
+                <div class="controls">
+                    <input type="file" class="input-large" id="image" name="image" />
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="lim">Limite d'age</label>
+                <div class="controls">
+                    <select id="lim" name="lim" class="input-large">
+                        <option value="0">&nbsp;&nbsp;0</option>
+                        <option value="10">10</option>
+                        <option value="12">12</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-actions">
+                <input type="submit" class="btn btn-primary">
+                <input type="reset" class="btn">
             </div>
         </div>
-        <div class="control-group">
-            <label class="control-label" for="duree">Durée</label>
-            <div class="controls">
-                <input type="number" min="0" style="height:25px;" class="input-large" id="duree" name="duree" />
-            </div>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="image">Image</label>
-            <div class="controls">
-                <input type="text" style="height:25px;" class="input-large" id="image" name="image" />
-            </div>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="lim">Limite d'age</label>
-            <div class="controls">
-                <select id="lim" name="lim" class="input-large">
-                    <option value="0">&nbsp;&nbsp;0</option>
-                    <option value="10">10</option>
-                    <option value="12">12</option>
-                    <option value="16">16</option>
-                    <option value="18">18</option>
-                </select>
-            </div>
-        </div>
-        <div class="form-actions">
-            <input type="submit" class="btn btn-primary">
-            <input type="reset" class="btn">
-        </div>
-        </div>
-    </fieldset>
+        </fieldset>
 
-</form>
-<script>
-    $(function(){
-        $("#postAjoutEpisode").on("submit", function(){
-            $("div.alert").hide();
-            var retour = true;
+    </form>
+    <script>
+        $(function(){
+            $("#postAjoutEpisode").on("submit", function(){
+                $("div.alert").hide();
+                var retour = true;
 
-            if($("#titre").val().length <= 0){
-                $("#titreAlert").show("slow");
-                retour = false;
-            }
-            if($("#numero").val().length <= 0){
-                $("#numeroAlert").show("slow");
-                retour = false;
-            }
-            if($("#saison").val().length <= 0){
-                $("#saisonAlert").show("slow");
-                retour = false;
-            }
-            if($("#serie").val() == 'NULL'){
-                $("#serieAlert").show("slow");
-                retour = false;
-            }
+                if($("#titre").val().length <= 0){
+                    $("#titreAlert").show("slow");
+                    retour = false;
+                }
+                if($("#numero").val().length <= 0){
+                    $("#numeroAlert").show("slow");
+                    retour = false;
+                }
+                if($("#saison").val().length <= 0){
+                    $("#saisonAlert").show("slow");
+                    retour = false;
+                }
+                if($("#serie").val() == 'NULL'){
+                    $("#serieAlert").show("slow");
+                    retour = false;
+                }
 
-            return retour;
+                return retour;
+            });
         });
-    });</script>
+
+
+        $("#typeLocation").on("change", function() {
+            if($('#typeLocation').is(':checked')) {
+                $('#prixLocation').removeAttr('readonly')
+            } else {
+                $('#prixLocation').attr('readonly', 'readonly')
+            }
+        });
+        $("#typeAchat").on("change", function() {
+            if($('#typeAchat').is(':checked')) {
+                $('#prixAchat').removeAttr('readonly')
+            } else {
+                $('#prixAchat').attr('readonly', 'readonly')
+            }
+        });
+
+        $("#typeStreaming").on("change", function() {
+            if($('#typeStreaming').is(':checked')) {
+                $('#prixStreaming').removeAttr('readonly')
+            } else {
+                $('#prixStreaming').attr('readonly', 'readonly')
+            }
+        });
+
+    </script>

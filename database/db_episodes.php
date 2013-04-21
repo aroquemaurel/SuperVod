@@ -16,10 +16,23 @@ function getEpisodesWithTarifs() {
         where episodes.ce=fichiers.ce
      */
 }
-function insertionEpisode($psTitre, $piSerie,$piNumero,$piAnnee,$piSaison,$psRealisateur,$piDuree,$piLim,$psImage) {
-    $sql = " INSERT INTO episodes(titre,cs,numero,annee,saison,realisateur,de,lim,image)
+function insertionEpisode($psTitre, $piSerie,$piNumero,$piAnnee,$piSaison,$psRealisateur,$piDuree,$piLim,$psImage, $paAchats) {
+    $sqlEpisode = " INSERT INTO episodes(titre,cs,numero,annee,saison,realisateur,de,lim,image)
 				VALUES('$psTitre','$piSerie','$piNumero','$piAnnee','$piSaison','$psRealisateur','$piDuree','$piLim','$psImage')";
-    return (mysql_query($sql));
+	$returnCode1 = mysql_query($sqlEpisode);
+	if(!$returnCode1) {
+		return $returnCode1;
+	}
+	$idEpisode	= mysql_insert_id();
+	foreach($paAchats as $achat) {
+		$sqlAchat = 'INSERT INTO fichiers(ce, type, prix) VALUES('.$idEpisode.', \''.$achat['type'].'\', \''.$achat['prix'].'\');';
+		echo $sqlAchat;
+		$returnCode1 = mysql_query($sqlAchat);
+		if(!$returnCode1) {
+			return $returnCode1;
+		}
+	}
+    return ($returnCode1);
 }
 
 function searchEpisodes($psSerie, $piAnnee, $piSaison, $piPrix, $paType) {
@@ -31,7 +44,7 @@ function searchEpisodes($psSerie, $piAnnee, $piSaison, $piPrix, $paType) {
 (select prix from fichiers,episodes where fichiers.ce = ep and type=\'L\' and episodes.ce=fichiers.ce) as prixLocation,
 (select prix from fichiers,episodes where fichiers.ce = ep and type=\'A\' and episodes.ce=fichiers.ce) as prixAchat
                 from episodes, fichiers, series
-                where fichiers.ce = episodes.ce and episodes.cs = series.cs';
+                where episodes.cs = series.cs and (fichiers.ce = episodes.ce or (1 and 1)) ';
     $requete .= ' and noms LIKE \'%'.$psSerie.'%\' ';
 
     if($bAnnee) {

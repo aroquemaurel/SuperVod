@@ -27,38 +27,8 @@
         }
     }
 
-?>
-<div class="well well-small">
-    <h1>Hello, world!</h1>
-</div>
-<div class="span3">
-    <div class="well sidebar-nav">
-        <ul class="nav nav-list">
-            <?php
-            $sTypeActuel = '';
-            foreach($series as $serie) {
-                if($sTypeActuel != $serie->types) {
-                    echo '<li class="nav-header">'.conversionType($serie->types).'</li>';
-                    $sTypeActuel = $serie->types;
-                }
-                echo '<li';
-                echo ($iSerieActuel == $serie->cs) ? ' class="active"' : '';
-                echo '><a href="?serie='.$serie->cs.'">'.$serie->noms.'</a></li>';
-            }
-            ?>
-        </ul>
-
-    </div><!--/.well -->
-</div><!--/span-->
 
 
-<div class="row-fluid">
-    <div class="span9">
-    <?php
-        $episodes = getEpisodes($iSerieActuel);
-
-        afficherSerie($series[$iSerieActuel]);
-        afficherListeEpisodes($episodes);
-
+    include_once('vues/index.php');
     include_once('vues/footer.php');
 ?>
