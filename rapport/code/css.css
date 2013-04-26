@@ -1,0 +1,18 @@
+.menuSeries {
+    padding-left: 30px; /* On ne colle pas le menu à gauche de l'écran */
+}
+#series {
+    float: left; /* flottement lors de la recherche d'une série */
+}
+
+/* Taille/affichage du carousel */
+.carousel h1 {
+    color: #d5d5d5;
+}
+.carousel {
+    height: 250px;
+    width: 800px;
+    background-color: black;
+    margin: auto;
+    margin-bottom: 15px;
+}

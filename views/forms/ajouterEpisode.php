@@ -86,21 +86,21 @@
                         <label class="control-label" for="typeLocation">Location</label>
                             <div class="controls">
                                 <input type="checkbox" id="typeLocation" name="typeLocation" value="L" />&nbsp;&nbsp;
-                                <input readonly="readonly" class="input-mini"  id="prixLocation" type="number" name="prixLocation" />
+                                <input readonly="readonly" class="input-mini"  id="prixLocation" type="number" step="0.1" name="prixLocation" />
                             </div>
                     </div>
                     <div class="typeAccesEpisode  control-group">
                        <label class="control-label" for="typeAchat">Achat</label>
                         <div class="controls">
                             <input type="checkbox" id="typeAchat" name="typeAchat" value="A" />&nbsp;&nbsp;
-                            <input class="input-mini" readonly="readonly" id="prixAchat" type="number" name="prixAchat" />
+                            <input class="input-mini" readonly="readonly" id="prixAchat" type="number" step="0.1" name="prixAchat" />
                         </div>
                     </div>
                     <div class="typeAccesEpisode control-group">
                         <label class="control-label" for="typeStreaming">Streaming</label>
                         <div class="controls">
                             <input type="checkbox" id="typeStreaming" name="typeStreaming" value="S" />&nbsp;&nbsp;
-                            <input class="input-mini" readonly="readonly" id="prixStreaming" type="number" name="prixStreaming" />
+                            <input class="input-mini" readonly="readonly" id="prixStreaming" type="number" step="0.1"  name="prixStreaming" />
                         </div>
                     </div>
                 </div>

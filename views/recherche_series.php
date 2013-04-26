@@ -1,11 +1,5 @@
-﻿<?php
-	include_once('vues/header.php');
-	require_once('database/connect.php');
-	
-	require_once('database/db_series.php');
-?>
-<div id="formSearch">
-<?php include('vues/forms/rechercheSerie.php'); ?>
+﻿<div id="formSearch">
+<?php include('views/forms/rechercheSerie.php'); ?>
 </div>
 
 <?php
@@ -31,5 +25,4 @@ $i = 0;
     }
 echo '</div>';
 echo '</div>';
-
 ?>

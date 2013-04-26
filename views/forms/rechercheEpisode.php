@@ -1,6 +1,6 @@
 <form method="get" action="recherche_episodes.php" class="form-inline well">
     <fieldset>
-        <legend>Rechercher une série</legend>
+        <legend>Rechercher un épisode</legend>
 
         <label class="control-label" for="serie">Série</label>
                 <input style="height:25px" type="text" class="input-medium"  id="serie"
@@ -19,11 +19,11 @@
                     ?>
                 </select>
     <label class="control-label" for="saison">Saison</label>
-    <input type="number" style="height:25px" min="0" class="input-mini" id="saison"
+    <input type="number" style="height:25px" min="0"  class="input-mini" id="saison"
            value="<?php echo (isset($_GET['saison'])) ? $_GET['saison'] : '';//Si l'utilisateur avait entré un titre ?>" name="saison" />
 
     <label class="control-label" for="saison">Prix maximum</label>
-    <input type="number" style="height:25px" min="0" class="input-mini"  id="prix"
+    <input type="number"  step="0.10" style="height:25px" min="0" class="input-mini"  id="prix"
            value="<?php echo (isset($_GET['prix'])) ? $_GET['prix'] : '';//Si l'utilisateur avait entré un titre ?>" name="prix" />
                 <!-- Si un type à été choisis préalablement, on préselectionne le choix de l'utilisateur -->
                 <input type="checkbox" name="streaming" value="S"

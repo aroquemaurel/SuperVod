@@ -5,7 +5,7 @@
             Ajouter une série
         </button>
         <div id="item1" class="collapse accordion-group">
-            <?php include_once('vues/forms/ajouterSerie.php'); ?>
+            <?php include_once('views/forms/ajouterSerie.php'); ?>
         </div>
     </div>
     <div class="accordion-group">
@@ -14,7 +14,7 @@
             Ajouter un épisode
         </button>
         <div id="item2" class="collapse accordion-group">
-            <?php include('vues/forms/ajouterEpisode.php'); ?>
+            <?php include('views/forms/ajouterEpisode.php'); ?>
         </div>
     </div>
 </div>

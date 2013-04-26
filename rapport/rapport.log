@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.28)  21 APR 2013 11:57
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.28)  23 APR 2013 22:37
 entering extended mode
  %&-line parsing enabled.
 **rapport.tex
@@ -790,6 +790,13 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \c@LT@tables=\count137
 \c@LT@chunks=\count138
 \LT@p@ftn=\toks33
+) (./wrapfig.sty
+\wrapoverhang=\dimen165
+\WF@size=\dimen166
+\c@WF@wrappedlines=\count139
+\WF@box=\box42
+\WF@everypar=\toks34
+Package: wrapfig 2003/01/31  v 3.6
 )
 (/home/aroquemaurel/cours/includesLaTeX/listings.tex
 (/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
@@ -818,41 +825,41 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 ) (./rapport.aux)
 \openout1 = `rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 50.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 52.
 
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/share/texmf/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count139
-\scratchdimen=\dimen165
-\scratchbox=\box42
-\nofMPsegments=\count140
-\nofMParguments=\count141
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count142
-\MPscratchDim=\dimen166
-\MPnumerator=\count143
-\everyMPtoPDFconversion=\toks35
+\scratchcounter=\count140
+\scratchdimen=\dimen167
+\scratchbox=\box43
+\nofMPsegments=\count141
+\nofMParguments=\count142
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count143
+\MPscratchDim=\dimen168
+\MPnumerator=\count144
+\everyMPtoPDFconversion=\toks36
 )
-LaTeX Info: Redefining \degres on input line 50.
-LaTeX Info: Redefining \dots on input line 50.
-LaTeX Info: Redefining \up on input line 50.
+LaTeX Info: Redefining \degres on input line 52.
+LaTeX Info: Redefining \dots on input line 52.
+LaTeX Info: Redefining \up on input line 52.
 
 *geometry auto-detecting driver*
 *geometry detected driver: pdftex*
@@ -895,134 +902,267 @@ driver: pdftex
 \@twosidetrue \@mparswitchtrue 
 (1in=72.27pt, 1cm=28.45pt)
 -----------------------
-Package hyperref Info: Link coloring ON on input line 50.
+Package hyperref Info: Link coloring ON on input line 52.
 (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count144
+\c@section@level=\count145
 )
-LaTeX Info: Redefining \ref on input line 50.
-LaTeX Info: Redefining \pageref on input line 50.
+LaTeX Info: Redefining \ref on input line 52.
+LaTeX Info: Redefining \pageref on input line 52.
  (./rapport.out)
 (./rapport.out)
 \@outlinefile=\write6
 \openout6 = `rapport.out'.
 
-\AtBeginShipoutBox=\box43
-\c@lstlisting=\count145
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 53.
- (/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptm.fd
+\AtBeginShipoutBox=\box44
+\c@lstlisting=\count146
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 56.
+ (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 56.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 53.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 56.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[2
-
-]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 54.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 58.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 54.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 58.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 54.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 58.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 54.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 58.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 54.
+(Font)              <12> on input line 58.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 54.
+(Font)              <8> on input line 58.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 54.
-LaTeX Font Info:    Try loading font information for U+msa on input line 54.
+(Font)              <6> on input line 58.
+LaTeX Font Info:    Try loading font information for U+msa on input line 58.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 54.
+LaTeX Font Info:    Try loading font information for U+msb on input line 58.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for T1+pag on input line 59.
+LaTeX Font Info:    Try loading font information for T1+pag on input line 63.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/t1pag.fd
 File: t1pag.fd 2001/06/04 font definitions for T1/pag.
 )
 
 LaTeX Font Warning: Font shape `T1/pag/bc/n' undefined
-(Font)              using `T1/pag/m/n' instead on input line 59.
+(Font)              using `T1/pag/m/n' instead on input line 63.
 
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 62.
-(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3
-
-]
+[2]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 82.
+(Font)              <10> on input line 90.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 82.
+(Font)              <7> on input line 90.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 82.
+(Font)              <5> on input line 90.
  (./rapport.toc)
 \tf@toc=\write7
 \openout7 = `rapport.toc'.
 
- [4
+ [3
 
 ]
 Chapitre 1.
 
-Overfull \hbox (35.9038pt too wide) in paragraph at lines 83--83
+Overfull \hbox (35.9038pt too wide) in paragraph at lines 91--91
 [][] 
  []
 
-[5
+[4
 
 ]
 Chapitre 2.
 
-Overfull \hbox (35.9038pt too wide) in paragraph at lines 97--97
+Overfull \hbox (35.9038pt too wide) in paragraph at lines 116--116
 [][] 
  []
 
-[6
+<screens/redmine.png, id=149, 1445.4pt x 903.375pt>
+File: screens/redmine.png Graphic file (type png)
+ <use screens/redmine.png>
+Overfull \hbox (11.38089pt too wide) in paragraph at lines 122--123
+ [][] 
+ []
 
-]
+
+Underfull \vbox (badness 3179) has occurred while \output is active []
+
+ [5
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.137 
+       <./screens/redmine.png (PNG copy)>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6]
 Chapitre 3.
 
-Overfull \hbox (35.9038pt too wide) in paragraph at lines 100--100
+Overfull \hbox (35.9038pt too wide) in paragraph at lines 148--148
 [][] 
  []
 
-[7
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 162.
+(./code/css.css)
+Underfull \vbox (badness 1552) has occurred while \output is active []
+
+ [7
+
+]
+(./code/js.js)
+
+LaTeX Font Warning: Font shape `T1/pag/bc/sc' undefined
+(Font)              using `T1/pag/bc/n' instead on input line 169.
+
+(./code/vue.php) [8] (./code/sql.sql) (./code/sql.php [9])
+(./code/controleur.php) [10]
+Chapitre 4.
+
+Overfull \hbox (35.9038pt too wide) in paragraph at lines 193--193
+[][] 
+ []
+
+
+</home/aroquemaurel/cours/includesLaTeX/images/remarque.png, id=333, 22.94286pt
+ x 22.94286pt>
+File: /home/aroquemaurel/cours/includesLaTeX/images/remarque.png Graphic file (
+type png)
+
+<use /home/aroquemaurel/cours/includesLaTeX/images/remarque.png>
+<screens/accueil.png, id=335, 1099.10625pt x 690.58pt>
+File: screens/accueil.png Graphic file (type png)
+
+<use screens/accueil.png>
+Overfull \hbox (11.38089pt too wide) in paragraph at lines 205--206
+[][]
+ []
+
+[11
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.212 	\section
+               {Recherche} </home/aroquemaurel/cours/includesLaTeX/images/remar
+que.png> <./screens/accueil.png>]
+<screens/rechercheSerie.png, id=344, 1445.4pt x 903.375pt>
+File: screens/rechercheSerie.png Graphic file (type png)
+
+<use screens/rechercheSerie.png>
+<screens/rechercheEpisodes.png, id=345, 1445.4pt x 903.375pt>
+File: screens/rechercheEpisodes.png Graphic file (type png)
+
+<use screens/rechercheEpisodes.png> [12pdfTeX warning (ext4): destination with 
+the same identifier (name{figure.4.2}) has been already used, duplicate ignored
+
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.227 	C
+        es deux fonctionnalités sont assez similaires, bien que les critèr...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.227 	C
+        es deux fonctionnalités sont assez similaires, bien que les critèr...
+ <./screens/rechercheSerie.png (PNG copy)> <./screens/rechercheEpisodes.png (PN
+G copy)>] <screens/adminEpisode.png, id=356, 1445.4pt x 903.375pt>
+File: screens/adminEpisode.png Graphic file (type png)
+
+<use screens/adminEpisode.png>
+Overfull \hbox (25.60727pt too wide) in paragraph at lines 237--238
+ [][] 
+ []
+
+<screens/htmlValidator.png, id=358, 1445.4pt x 903.375pt>
+File: screens/htmlValidator.png Graphic file (type png)
+
+<use screens/htmlValidator.png>
+Underfull \vbox (badness 2772) has occurred while \output is active []
+
+ [13pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.254 	L
+        a figure \ref{fig:htmlValidator} montre simplement notre site web pa...
+ <./screens/adminEpisode.png (PNG copy)>] [14pdfTeX warning (ext4): destination
+ with the same identifier (name{figure.4.5}) has been already used, duplicate i
+gnored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.257 	\listoffigures
+                      <./screens/htmlValidator.png (PNG copy)>]
+Annexe A.
+
+Overfull \hbox (23.60016pt too wide) in paragraph at lines 257--257
+[][] 
+ []
+
+(./rapport.lof)
+\tf@lof=\write8
+\openout8 = `rapport.lof'.
+
+
+Annexe B.
+
+Overfull \hbox (23.60016pt too wide) in paragraph at lines 260--260
+[][] 
+ []
+
+(./rapport.lol)
+\tf@lol=\write9
+\openout9 = `rapport.lol'.
+
+ [15
 
 ] (./rapport.aux)
 
@@ -1030,25 +1170,30 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 14424 strings out of 493848
- 229455 string characters out of 1152823
- 326912 words of memory out of 3000000
- 17297 multiletter control sequences out of 15000+50000
- 75978 words of font info for 71 fonts, out of 3000000 for 9000
+ 15574 strings out of 493848
+ 242551 string characters out of 1152823
+ 521166 words of memory out of 3000000
+ 18226 multiletter control sequences out of 15000+50000
+ 89907 words of font info for 78 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 47i,13n,49p,337b,345s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-texlive/font
-s/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></us
-r/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/pu
-blic/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/sha
-re/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/tex
-mf-texlive/fonts/type1/urw/avantgar/uagk8a.pfb></usr/share/texmf-texlive/fonts/
-type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/u
-tmr8a.pfb>
-Output written on rapport.pdf (7 pages, 226059 bytes).
+ 47i,13n,49p,337b,1920s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/s
+hare/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/pu
+blic/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/te
+xmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr
+7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/font
+s/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmtt12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr
+/share/texmf-texlive/fonts/type1/urw/avantgar/uagk8a.pfb></usr/share/texmf-texl
+ive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/u
+rw/times/utmr8a.pfb>
+Output written on rapport.pdf (15 pages, 1495456 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 487 PDF objects out of 1000 (max. 8388607)
+ 197 named destinations out of 1000 (max. 500000)
+ 224 words of extra memory for PDF output out of 10000 (max. 10000000)
 
